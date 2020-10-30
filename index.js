@@ -1,9 +1,3 @@
-//Change working directory if user defined PACKAGEJSON_DIR
-if(process.env.PACKAGEJSON_DIR) {
-  process.env.GITHUB_WORKSPACE = process.env.GITHUB_WORKSPACE.concat(process.env.PACKAGEJSON_DIR)
-  process.chdir(process.env.GITHUB_WORKSPACE)
-}
-
 const { Toolkit } = require('actions-toolkit')
 const { execSync } = require('child_process')
 
@@ -39,7 +33,7 @@ Toolkit.run(async tools => {
 
   let version = process.env['INPUT_DEFAULT'] || 'patch'
   let foundWord = null;
-  
+
   if (messages.some(
     message => /^([a-zA-Z]+)(\(.+\))?(\!)\:/.test(message) || majorWords.some(word => message.includes(word)))) {
     version = 'major'
