@@ -1,6 +1,6 @@
 {
   "name": "gh-action-bump-version",
-  "version": "5.0.17",
+  "version": "8.0.14",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/phips28/gh-action-bump-version.git"
@@ -20,10 +20,10 @@
   },
   "dependencies": {
     "actions-toolkit": "^2.2.0",
-    "yargs": "^14.2.0"
+    "yargs": "^15.3.1"
   },
   "devDependencies": {
-    "jest": "^24.5.0",
-    "standard": "^14.3.1"
+    "jest": "^25.2.7",
+    "standard": "^14.3.3"
   }
 }
